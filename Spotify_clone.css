@@ -1,0 +1,288 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    background-color: black;
+    color: white;
+    overflow: hidden;
+}
+
+.main{
+    display: flex;
+    height: 100vh;
+    padding: 0.5rem;
+}
+
+.sidebar{
+    background-color:black;
+    width: 340px;
+    border-radius: 1rem;
+    /* 1 rem ka matlab 16 px */
+}
+
+.main-content{
+    background-color: #121212;
+    flex: 1;
+    border-radius: 1rem;
+    overflow: auto;
+    /* scroll bar hamesha hama dekhaye nehi daga jab jarurat hoge tabhe dekhayi dega */
+    /* baki sa baccha sara space mujhe da do bro */
+}
+
+.music-player{
+    background-color: black;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    height: 72px;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+.nav{
+    background-color: #121212;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100px;
+    padding: 0.5rem 0.75rem;
+
+}
+
+.nav-options{
+    line-height: 40px;
+    opacity: 0.7;
+    padding: 0.5rem;
+
+}
+
+.nav-options i{
+    font-size: 1.25rem;
+}
+
+.nav-options a{
+    font-size: 1rem;
+    margin-left:1rem ;
+
+}
+
+.nav-options:hover{
+    opacity: 1;
+}
+
+.library{
+    background-color: #121212;
+    border-radius: 1rem;
+    height: 100%;
+    margin-top: 0.5rem;
+}
+
+.options{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.lib-options{
+    font-size: 1rem;
+    margin-left:1rem ;
+}
+
+img{
+    height:1.25rem;
+    width: 1rem;
+}
+
+.icons{
+    font-size: 1.25rem;
+}
+
+.icons i{
+    opacity: 0.7;
+    margin-right: 1rem;
+} 
+
+.icons i:hover{
+    opacity: 1;
+}
+
+.box-1, .box-2{
+    background-color: #242424;
+    width: 280px;
+    border-radius: 1rem;
+    padding: 1rem;
+    margin: 1rem;
+    margin-bottom: 1.5rem;
+
+}
+
+button{
+    background-color:white ;
+    border: 1px solid #242424;
+    color: black;
+    border: none;
+    border-radius: 100px;
+    font-weight: 700;
+    padding:0.4rem 1rem 0.4rem 1rem ; 
+    width: fit-content;
+}
+
+.sticky-nav{
+    position: sticky;
+    top: 0;
+    background-color: #121212;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1rem 0 1rem 0;
+    margin-top: 1rem;
+}
+
+.sticky-nav-icons img{
+    height: 1.5rem;
+    width: 1.5rem;
+    margin-left: 0.75rem;
+
+}
+.sticky-nav-options{
+    margin-right: 0.75rem;
+
+}
+
+button.badge{
+    margin-right:1rem;
+}
+
+.main-content{
+    padding: 0 1.5rem 0 1.5rem;
+}
+
+#app{
+    background-color: black;
+    color: white;
+}
+
+@media (max-width:1000px){
+    #hide{
+        display: none;
+    }
+}
+
+.image{
+    width: 150px;
+    height: 150px;
+    border-radius: 1rem;
+}
+
+.card{
+    background-color: #242424;
+    width: 150px;
+    height: 270px;
+    border-radius: 1rem;
+    /* note before giving this padding to the card container the width and heights were 150 and 270
+    but after giving padding it has become aroung 180 and 3-2 in width and height */
+    padding: 1rem;
+    margin: 1.75rem;
+}
+
+.cards-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card-title{
+    font-weight: 700;
+}
+
+.card-info{
+    opacity: 0.8;
+    font-size: 0.76rem;
+}
+
+.footer{
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-content: self;
+}
+
+.line{
+    width: 90%;
+    height: 50%;
+    border-top:1px solid grey;
+    opacity: 0.6;
+}
+
+.music-palyer{
+    display: flex;
+}
+
+.album{
+    width: 25%;
+}
+
+.player{
+    width: 50%;
+    height: 72px;
+    background-color: grey;
+}
+
+.player-controls{
+    height: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.player-control-icon{
+    height: 1rem;
+    width: 1rem;
+    margin-right: 1.75rem;
+    opacity: 0.7; 
+}
+
+#p3{
+    opacity: 1;
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+.player-control-icon:hover{
+    opacity: 1;
+}
+
+.playback-bar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.progress-bar{
+    width: 70%;
+    appearance: none;
+    background-color: transparent;
+    cursor: pointer; 
+}
+.progress-bar::-webkit-slider-runnable-track{
+    background-color: #ddd;
+    border-radius: 100px;
+    height: 0.25rem;
+
+}
+.progress-bar::-webkit-slider-thumb{
+    appearance: none;
+    height: 1rem;
+    width: 1rem;
+    background-color: #1bd760;
+    border-radius: 50%;
+    margin-top: -6px;
+}
+
+/* .controls{
+    width: 25%;
+    height: 100px;
+    background-color: #1bd760;
+} */
